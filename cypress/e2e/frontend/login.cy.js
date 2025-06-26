@@ -10,7 +10,7 @@ describe("Login no Serverest", () => {
     cy.url().should("include", "/admin/home");
   });
 
-  it.only("Deve exibir mensagem de erro ao tentar logar com credenciais inválidas", () => {
+  it("Deve exibir mensagem de erro ao tentar logar com credenciais inválidas", () => {
     cy.visit("");
 
     cy.get('input[name="email"]').type("teste@teste.com");
