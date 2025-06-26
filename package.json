@@ -1,0 +1,23 @@
+{
+  "name": "cypress-serverest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wanddes/cypress-serverest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wanddes/cypress-serverest/issues"
+  },
+  "homepage": "https://github.com/wanddes/cypress-serverest#readme",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.5.0"
+  }
+}
