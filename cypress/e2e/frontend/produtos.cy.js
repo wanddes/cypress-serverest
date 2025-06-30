@@ -25,14 +25,17 @@ describe("Cadastro de Produto", () => {
   it("Deve excluir o produto cadastrado", () => {
     cy.visit("/admin/listarprodutos");
 
-    cy.contains(nomeProduto).should("exist");
-
-    cy.contains(nomeProduto)
-      .closest("div")
-      .within(() => {
-        cy.get("button").contains("Excluir").click();
+    cy.get("tbody tr")
+      .contains(nomeProduto)
+      .should("exist")
+      .then((cell) => {
+        cy.wrap(cell)
+          .parents("tr")
+          .within(() => {
+            cy.get(".btn-danger").click();
+          });
       });
 
-    cy.contains(nomeProduto).should("not.exist");
+    cy.contains(nomeProduto, { timeout: 10000 }).should("not.exist");
   });
 });
